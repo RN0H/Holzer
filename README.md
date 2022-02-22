@@ -1,5 +1,6 @@
 # Holzer
 
+
 ![plot](https://github.com/RN0H/Holzer/blob/909471520e7158f2a4cc90c63be022a0c9d49808/pngs/freqfinder.png)
 
 The Holzer API Developed to check for Natural Frequencies and total Torque of a torsional Rotor system when subjected to a sinusoidal displacement of 1 unit.
