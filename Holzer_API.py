@@ -14,7 +14,7 @@ class Holzer:
             self.master = master
             self.master.title('Holzer')
             self.master.geometry('400x300')
-            freqfinder=PhotoImage(file=r'/home/rohan/Holzer/freqfinder.png')
+            freqfinder=PhotoImage(file=r'/home/rohan/Holzer/pngs/freqfinder.png')
             self.master.iconphoto(False,freqfinder)
             theme = ThemedStyle(self.master)
             theme.set_theme('radiance')
@@ -68,7 +68,7 @@ class Holzer:
                                self.wn.append(float(wn))
          print('frequency range is',self.wn)
          return self.precise_freq()
-         
+
     def precise_freq(self):
          j=[]
          y=[]
