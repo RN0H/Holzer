@@ -15,7 +15,7 @@ class Holzer:
             self.master.title('Holzer')
             self.master.geometry('400x300')
             freqfinder=PhotoImage(file=r'/home/rohan/Holzer/pngs/freqfinder.png')
-            self.master.iconphoto(False,freqfinder)
+            self.master.iconphoto(True,freqfinder)
             theme = ThemedStyle(self.master)
             theme.set_theme('radiance')
 

@@ -4,7 +4,10 @@ API Developed to check for Natural Frequencies and total Torque of a torsional R
 
 Explicitly for finding the natural frequencies of a rotor system such as:
 
-![plot](https://github.com/RN0H/Holzer/pngs/blob/c07077fdec3ce0f709dffb811ba13befd06a5334/TVD.png)
+![plot](https://github.com/RN0H/Holzer/blob/7584ec0d0bdbe00a377a0142639ad1e9e7902f71/pngs/TVD.png)
+
+
+
 
 
 
