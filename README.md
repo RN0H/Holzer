@@ -20,6 +20,5 @@ The shaft consists of 5 discs from and 6 spring constants.
 
 ![plot](https://github.com/RN0H/Holzer/blob/909471520e7158f2a4cc90c63be022a0c9d49808/pngs/fig.png)
 
-
-
+This process is also called modal analysis, and is used in softwares such as ANSYS® , Soldworks®, etc. These frequencies cause shaft failures and noise.
 
