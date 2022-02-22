@@ -1,4 +1,8 @@
-
+'''
+This is an old code of mine when i just began coding, 
+Hence many redundancies and oppurtunites for making it better
+Back then i never used comments :/
+'''
 import matplotlib.pyplot as plt
 
 from tkinter import*
