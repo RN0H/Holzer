@@ -9,6 +9,8 @@ Explicitly for finding the natural frequencies of a rotor system such as:
 
 ![plot](https://github.com/RN0H/Holzer/blob/7584ec0d0bdbe00a377a0142639ad1e9e7902f71/pngs/TVD.png)
 
+(image reference:: J Quiroga et al 2019 J. Phys.: Conf. Ser. 1160 012008)
+
 The above rotor system figure can also be expressed as [I1, K1, I2, K2 ...] where I and K are the Polar moment of intertia and spring constant.
 
 Lets take an example:
