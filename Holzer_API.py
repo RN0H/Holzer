@@ -2,6 +2,9 @@
 import matplotlib.pyplot as plt
 
 from tkinter import*
+from tkinter.ttk import*
+from tkinter import ttk
+from ttkthemes import ThemedStyle
 import tkinter as tk
 import numpy as np
 
@@ -11,23 +14,22 @@ class Holzer:
             self.master = master
             self.master.title('Holzer')
             self.master.geometry('400x300')
-            freqfinder=PhotoImage(file='freqfinder.png')
+            freqfinder=PhotoImage(file=r'/home/rohan/Holzer/freqfinder.png')
             self.master.iconphoto(False,freqfinder)
-
-
+            theme = ThemedStyle(self.master)
+            theme.set_theme('radiance')
 
             e1 = Entry(self.master,textvariable=self.J_K)
             b1 = Button(self.master,text='calculate',command=self.values)
             b2 = Button(self.master,text='quit',command=self.master.destroy)
 
-            l1 = Label(self.master,text='[J1,K1,J2,..]')
+            l1 = Label(self.master,text='J1,K1,J2,..')
             l2 = Label(self.master,text='J = kgm^2\n K = N-m/rad')
-            l2.place(x=90,y=200)
+            l2.place(x=120,y=200)
             l1.place(x=120,y=50)
             e1.place(x=200,y=50)
             b1.place(x=175,y=100)
             b2.place(x=175,y=150)
-
 
     def values(self):                     #[J][O1]-[K]([O1]-[O2])=0
           self.stiffness = []  #[K]
@@ -36,7 +38,6 @@ class Holzer:
           self.wn = []
           self.s = [float(m) for m in (self.J_K.get()).split(',')]
           self.divide()
-
 
     def divide(self):
             if len(self.s)==2:
@@ -61,13 +62,13 @@ class Holzer:
               self.theta=[]
               self.theta.append(1)
               for i in range(0,len(self.inertia)-1):
-                     self.theta.append(self.theta[i]-((6.28*wn)**2*np.dot(np.array(self.inertia)[0:len(self.theta)],np.array(self.theta)))/(self.stiffness[i]))
-              print(np.dot(self.inertia,self.theta),' - ',wn,' - ',self.theta)
+                     self.theta.append(self.theta[i]-(((6.28*wn)**2)*np.dot(np.array(self.inertia)[0:len(self.theta)],np.array(self.theta)))/(self.stiffness[i]))
+              #print(np.dot(self.inertia,self.theta),' - ',wn,' - ',self.theta)
               if int(np.dot(self.inertia,self.theta))==0:
                                self.wn.append(float(wn))
          print('frequency range is',self.wn)
          return self.precise_freq()
-
+         
     def precise_freq(self):
          j=[]
          y=[]
@@ -115,11 +116,10 @@ class Holzer:
         for i in self.freq_theta:
                  plt.legend()
                  plt.plot()
-        plt.xlabel('Number of Discs')
+        plt.xlabel('Shaft length')
         plt.ylabel('Deflection')
         plt.grid()
         plt.show()
-
 
 root = tk.Tk()
 Holzer(root)
